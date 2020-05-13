@@ -1,6 +1,5 @@
 package com.jdbc.dao;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -9,8 +8,6 @@ import com.jdbc.bean.Employee;
 
 @Repository("employeeDao")
 public class EmployeeDaoImpl implements EmployeeDao{
-	
-	static Logger logger = Logger.getLogger(EmployeeDaoImpl.class);
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
