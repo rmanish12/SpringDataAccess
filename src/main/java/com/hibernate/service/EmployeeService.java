@@ -9,5 +9,6 @@ public interface EmployeeService {
 	public void insert(Employee emp);
 	public int delete(int empId);
 	public List<Employee> getEmployees();
+	public void update(int empId, String department);
 	
 }

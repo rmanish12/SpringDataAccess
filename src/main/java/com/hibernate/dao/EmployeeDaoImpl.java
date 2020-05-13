@@ -76,6 +76,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			
 			allEmployees = session.createQuery(criteria).getResultList();
 			
+			System.out.println("Retrieving all employees");
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -83,6 +85,28 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		}
 		
 		return allEmployees;
+	}
+
+	@Override
+	public void update(int empId, String department) {
+		
+		session = sessionFactory.openSession();
+		txn = session.beginTransaction();
+		
+		try {
+			Employee emp = session.get(Employee.class, empId);
+			
+			emp.setDepartment(department);
+			session.update(emp);
+			
+			txn.commit();
+			System.out.println("Record updated successfully");
+		} catch(Exception e) {
+			txn.rollback();
+		} finally {
+			session.close();
+		}
+		
 	}
 
 }

@@ -24,6 +24,8 @@ public class Client {
 		
 //		empService.delete(1001);
 		
+		empService.update(1000, "Engineering");
+		
 		List<Employee> allEmployees = empService.getEmployees();
 		for(Employee e: allEmployees) {
 			System.out.println(e);
