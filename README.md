@@ -5,6 +5,8 @@
 #### Branches
 
   - master: Spring JDBC with java based configuration
+  - spring-hibernate: master + spring-hibernate-configuration
+  - spring-jpa: spring-hibernate + spring-jpa-configuration
   
 ##### Dependencies for Spring JDBC configuration using PostGreS
 ```
@@ -42,3 +44,5 @@ The configuration for Spring JDBC is defined in com.jdbc.config.SpringJdbcConfig
 	    <version>5.4.13.Final</version>
 	</dependency>
 ```
+
+##### No additional dependency is required for Spring JPA implementation using Hibernate
