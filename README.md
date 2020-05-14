@@ -7,6 +7,7 @@
   - master: Spring JDBC with java based configuration
   - spring-hibernate: master + spring-hibernate-configuration
   - spring-jpa: spring-hibernate + spring-jpa-configuration
+  - spring transaction: spring jpa + spring transaction
   
 ##### Dependencies for Spring JDBC configuration using PostGreS
 ```
