@@ -47,3 +47,24 @@ The configuration for Spring JDBC is defined in com.jdbc.config.SpringJdbcConfig
 ```
 
 ##### No additional dependency is required for Spring JPA implementation using Hibernate
+
+##### Dependencies for Spring Data JPA with Hibernate and PostGres
+```
+  	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.2.11</version>
+	</dependency>
+	
+		<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.4.13.Final</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-jpa</artifactId>
+	    <version>2.2.6.RELEASE</version>
+	</dependency>
+```
