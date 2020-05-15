@@ -45,5 +45,10 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public Page<Employee> paginatedEmployee(Pageable page) {
 		return empDao.findAll(page);
 	}
+
+	@Override
+	public List<Employee> findByDepartment(String department) {
+		return empDao.findByDepartment(department);
+	}
 	
 }

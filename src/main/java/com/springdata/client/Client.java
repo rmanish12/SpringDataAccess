@@ -38,6 +38,8 @@ public class Client {
 		
 //		employeeService.removeEmployee(1004);
         
+        
+        // for pagination
         Pageable pagable = PageRequest.of(2, 3);
         
         Iterable<Employee> employees = employeeService.paginatedEmployee(pagable);
@@ -47,6 +49,7 @@ public class Client {
         	System.out.println(e);
         }
         
+        // for sorting
         Sort sort = Sort.by(Sort.Direction.ASC, "empName");
         
         System.out.println("Sorted employees: ");
@@ -55,6 +58,13 @@ public class Client {
         	System.out.println(e);
         }
 		
+        // named query
+        List<Employee> filteredEmployees = employeeService.findByDepartment("HR");
+        System.out.println("Filtered employees by department");
+        for(Employee e: filteredEmployees) {
+        	System.out.println(e);
+        }
+        
 //		List<Employee> allEmployees = employeeService.getAllEmployees();
 //		for(Employee e: allEmployees) {
 //			System.out.println(e);

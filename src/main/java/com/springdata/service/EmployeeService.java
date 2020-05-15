@@ -15,5 +15,6 @@ public interface EmployeeService {
 	public List<Employee> getAllEmployees();
 	public List<Employee> sortedEmployees(Sort sort);
 	public Page<Employee> paginatedEmployee(Pageable page);
+	public List<Employee> findByDepartment(String department);
 	
 }
